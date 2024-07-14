@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Localização </title>
+    </head>
+    <body>
+        <p> Clique para conhecer sua posição geográfica</p>
+        <p> A opção precisa ser ativada nas congfigurações de alguns navegadores.</p>
+        <button onclick="localizar()">LOCALIZAR</button>
+        <p id="demo"></p>
+        <script>
+            var texto = document.getElementById("demo");
+            function localizar(){
+                if (navigator.geolocation){
+                    navigator.geolocation.getCurrentPosition(coordenadas);
+                } else{
+                    texto.innerHTML="Geolocation não suportado.Verifique opções em seu navegador ou utilize outro";
+                }
+            }
+            function coordenadas(position){
+                texto.innerHTML="Lat:"+ position.coords.latitude + "<br>long:"+ position.coords.longitude;
+            }
+        </script>
+    </body>
+</html>

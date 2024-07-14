@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {
+ fonte-size : 20px;
+ color : red;
+}
+</style>
+<script src=”jquery.js”></script>
+<script>
+$(document).ready(function(){
+$(“#ve”).click(function(){
+ $(“p”).hide();
+});
+$(“#naoVe”).click(function(){
+ $(“p”).show();
+});
+});
+</script>
+</head>
+<body>
+<p>CODIGO COM ERRO
+    
+</p>
+<button id=”ve”>VER</button>
+<button id=”naoVe”>NÃO VER</button>
+</body>
+</html>

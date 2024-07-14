@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title> TROCA DE TEXTO</title>
+
+    </head>
+    <body>
+        <h2>Código HTML com Javascript</h2>
+        <P>Troca de imagens onclick="troca()</P>
+
+        <img id="imagem" onclick="troca()" src="inicial.png" width="50%">
+
+        <script>
+            function troca(){
+                var figura = document.getElementById('imagem');
+                if(figura.src.match("inicial")){
+                    figura.src = "final.png";
+                } else {
+                    figura.src="inicial.png";
+                }
+            }
+        </script>       
+
+    </body>
+    
+</html>
